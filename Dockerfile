@@ -1,2 +1,4 @@
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
+FROM ubuntu:18.04
+COPY . /app
+RUN make /app
+CMD python /app/app.py
